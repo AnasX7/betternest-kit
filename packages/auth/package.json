@@ -20,7 +20,7 @@
     "@repo/db": "workspace:*",
     "better-auth": "^1.4.3",
     "dotenv": "^17.2.2",
-    "typescript": "^5.9.2",
+    "typescript": "catalog:",
     "zod": "^4.1.11"
   }
 }
