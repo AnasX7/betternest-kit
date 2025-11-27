@@ -13,7 +13,9 @@ import type { CreateLinkDto, UpdateLinkDto } from '@repo/api';
 import { LinksService } from './links.service';
 import { EnvService } from '../config/env.service';
 import { PrismaService } from '../db/prisma.service';
+import { AllowAnonymous } from '@thallesp/nestjs-better-auth';
 
+@AllowAnonymous()
 @Controller('links')
 export class LinksController {
   constructor(

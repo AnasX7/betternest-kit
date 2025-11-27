@@ -1,0 +1,26 @@
+{
+  "name": "@repo/auth",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@better-auth/expo": "^1.4.3",
+    "@repo/db": "workspace:*",
+    "better-auth": "^1.4.3",
+    "dotenv": "^17.2.2",
+    "typescript": "^5.9.2",
+    "zod": "^4.1.11"
+  }
+}

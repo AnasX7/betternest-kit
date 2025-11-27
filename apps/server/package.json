@@ -21,6 +21,9 @@
     "@nestjs/platform-express": "^11.0.0",
     "@repo/api": "workspace:*",
     "@repo/db": "workspace:*",
+    "@repo/auth": "workspace:*",
+    "@thallesp/nestjs-better-auth": "^2.2.0",
+    "better-auth": "^1.4.3",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1",
     "zod": "^4.1.11"
@@ -44,6 +47,6 @@
     "ts-loader": "^9.4.3",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "5.5.4"
+    "typescript": "^5.9.2"
   }
 }
