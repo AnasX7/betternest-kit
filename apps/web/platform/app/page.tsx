@@ -22,7 +22,7 @@ const ThemeImage = (props: Props) => {
 
 async function getLinks(): Promise<Link[]> {
   try {
-    const res = await fetch('http://localhost:3000/links', {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3000'}/links`, {
       cache: 'no-store',
     });
 
