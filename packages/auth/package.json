@@ -2,6 +2,8 @@
   "name": "@repo/auth",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "private": true,
+  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
