@@ -1,5 +1,6 @@
 import { Button } from '@repo/ui/button';
 import Image, { type ImageProps } from 'next/image';
+import { api } from '../lib/api';
 
 export const dynamic = 'force-dynamic';
 
@@ -23,14 +24,8 @@ const ThemeImage = (props: Props) => {
 
 async function checkApiConnection(): Promise<boolean> {
   try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3000'}/`,
-      {
-        cache: 'no-store',
-      },
-    );
-
-    return res.ok;
+    const res = await api.hello.get();
+    return !!res.message;
   } catch (error) {
     console.error('Error connecting to API:', error);
     return false;

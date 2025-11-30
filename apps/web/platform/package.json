@@ -11,6 +11,10 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@orpc/client": "^1.12.0",
+    "@orpc/contract": "^1.12.0",
+    "@orpc/openapi-client": "^1.12.0",
+    "@repo/api": "workspace:^",
     "@repo/ui": "workspace:*",
     "babel-plugin-react-compiler": "^1.0.0",
     "next": "^16.0.5",
@@ -23,6 +27,7 @@
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "19.1.1",
+    "baseline-browser-mapping": "^2.8.32",
     "eslint": "^9.39.1",
     "typescript": "catalog:"
   }
