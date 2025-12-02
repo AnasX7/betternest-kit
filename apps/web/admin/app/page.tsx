@@ -1,6 +1,6 @@
 import { Button } from '@repo/ui/components/button';
 import Image, { type ImageProps } from 'next/image';
-import { apiClient } from '@/lib/api';
+import { api } from '@/lib/api-client';
 
 export const dynamic = 'force-dynamic';
 
@@ -24,7 +24,7 @@ const ThemeImage = (props: Props) => {
 
 async function checkApiConnection(): Promise<boolean> {
   try {
-    const res = await apiClient.hello.get();
+    const res = await api.hello.get();
     return !!res.message;
   } catch (error) {
     console.error('Error connecting to API:', error);
@@ -80,9 +80,9 @@ export default async function Home() {
           </a>
         </div>
 
-        <Button appName="admin" className={styles.secondary}>
+        {/* <Button appName="admin" className={styles.secondary}>
           Open alert
-        </Button>
+        </Button> */}
 
         <div className={styles.ctas}>
           <div className={styles.apiStatus}>

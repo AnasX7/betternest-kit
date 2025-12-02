@@ -23,5 +23,5 @@ const link = new OpenAPILink(contract, {
   plugins: [new ResponseValidationPlugin(contract)],
 });
 
-export const apiClient: ContractRouterClient<typeof contract> =
+export const api: ContractRouterClient<typeof contract> =
   createORPCClient(link);

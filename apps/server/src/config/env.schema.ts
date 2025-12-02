@@ -8,7 +8,10 @@ export const envSchema = z.object({
   DATABASE_URL: z.url(),
   BETTER_AUTH_SECRET: z.string(),
   BETTER_AUTH_URL: z.url(),
-  CORS_ORIGIN: z.string().default('*'),
+  CORS_ORIGIN: z
+    .string()
+    .default('*')
+    .transform((val) => val.split(',')),
   THROTTLE_TTL: z.string().default('60'),
   THROTTLE_LIMIT: z.string().default('10'),
   R2_ENDPOINT: z.url().optional(),
