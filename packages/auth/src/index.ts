@@ -1,5 +1,7 @@
 import * as dotenv from 'dotenv';
 import { betterAuth } from 'better-auth';
+import { APIError } from 'better-auth/api';
+import { createAuthMiddleware } from 'better-auth/api';
 import { admin, openAPI } from 'better-auth/plugins';
 import { checkout, polar, portal } from '@polar-sh/better-auth';
 import { nextCookies } from 'better-auth/next-js';
