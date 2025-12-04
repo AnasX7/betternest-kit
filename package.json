@@ -1,10 +1,7 @@
 {
-  "name": "my-turborepo",
+  "name": "betternest-kit",
   "version": "0.0.0",
   "private": true,
-  "description": "",
-  "author": "",
-  "license": "UNLICENSED",
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
@@ -27,7 +24,7 @@
     "turbo": "^2.6.1",
     "typescript": "catalog:"
   },
-  "packageManager": "pnpm@9.15.9",
+  "packageManager": "pnpm@10.8.1",
   "engines": {
     "node": ">=18"
   },
